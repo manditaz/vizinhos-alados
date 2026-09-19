@@ -72,29 +72,7 @@
       margin-bottom: 4px;
       font-size: 14.5px;
     }
-    /* Botão Principal Touch */
-    .btn-action {
-      display: block;
-      background: #2e7d32;
-      color: #ffffff !important;
-      text-decoration: none;
-      text-align: center;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 14px 16px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(46, 125, 50, 0.25);
-      transition: background 0.2s ease;
-    }
-    .btn-action:hover {
-      background: #256629;
-    }
-    .btn-hint {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      margin-top: -8px;
-    }
+    
     /* Lista de Recursos */
     .features {
       display: flex;
@@ -127,40 +105,91 @@
       color: #555;
       line-height: 1.35;
     }
-    /* Bloco QR Code */
-    .qr-card {
-      border: 1px dashed #4caf50;
-      background: #fafdfa;
-      border-radius: 12px;
-      padding: 14px;
+
+    /* Central de Acesso Unificada (QR Code + Botão) */
+    .access-card {
+      border: 2px solid #2e7d32;
+      background: linear-gradient(180deg, #fbfdfb 0%, #f1f8f1 100%);
+      border-radius: 14px;
+      padding: 16px 14px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
     }
     .qr-badge {
       background: #2e7d32;
       color: #fff;
       font-size: 11px;
       font-weight: bold;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 12px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+    .qr-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .qr-link:hover {
+      transform: scale(1.02);
+    }
     .qr-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 8px;
+      width: 145px;
+      height: 145px;
+      border-radius: 10px;
       background: #fff;
       padding: 6px;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #d0e2d0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .qr-tap-hint {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1e7e34;
+      margin-top: 6px;
+      background: rgba(46, 125, 50, 0.1);
+      padding: 3px 10px;
+      border-radius: 8px;
     }
     .qr-desc {
       font-size: 12px;
+      color: #666;
+    }
+
+    /* Botão Principal Touch */
+    .btn-action {
+      display: block;
+      width: 100%;
+      background: #2e7d32;
+      color: #ffffff !important;
+      text-decoration: none;
+      text-align: center;
+      font-size: 15.5px;
+      font-weight: 700;
+      padding: 13px 16px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(46, 125, 50, 0.25);
+      transition: background 0.2s ease, transform 0.1s ease;
+      margin-top: 4px;
+    }
+    .btn-action:hover {
+      background: #256629;
+      transform: translateY(-1px);
+    }
+    .btn-hint {
+      text-align: center;
+      font-size: 11.5px;
       color: #555;
     }
+
     .footer-quote {
       text-align: center;
       font-size: 12.5px;
@@ -183,7 +212,6 @@
 
     <!-- Banner com Ilustração -->
     <div class="banner">
-      <!-- Substitua pelo link real da sua imagem ou mantenha a ilustração -->
       <img src="passaros.jpg" alt="Pássaros Cantando" />
     </div>
 
@@ -192,14 +220,6 @@
       <strong>🍃 Um convite para respirar e contemplar:</strong>
       Você já reparou na música que toca na sua janela todas as manhãs? Nosso condomínio é um refúgio verde privilegiado! Para nos reconectar com essa paz e valorizar a preservação do nosso espaço, instalamos uma estação inteligente que escuta o jardim e cataloga os nossos visitantes alados em tempo real.
     </div>
-
-    <!-- Botão de Acesso Direto (Chave para Celular) -->
-    <div>
-      <a href="https://punytruck2881.grafana.net/d/ammk75q/status-geral-das-especies-f09f948e?kiosk" target="_blank" class="btn-action">
-        👉 Acessar Painel dos Pássaros no Grafana →
-      </a>
-    </div>
-    <div class="btn-hint">Acesse e divirta-se</div>
 
     <!-- Lista de Recursos em Linha Única -->
     <div class="features">
@@ -230,14 +250,25 @@
 
     </div>
 
-    <!-- Bloco com QR Code (Centralizado) -->
-    <div class="qr-card">
-      <div class="qr-badge">Acesso pelo Computador ou Celular</div>
-      <!-- Insira aqui a imagem real do seu QR Code gerado -->
-      <img class="qr-img" src="qrcode.png" alt="QR Code" />
+    <!-- Central de Acesso Unificada (QR Code Clicável + Botão de Toque) -->
+    <div class="access-card">
+      <div class="qr-badge">Acesso ao Painel Online</div>
+      
+      <!-- QR Code Clicável: toca nele ou escaneia -->
+      <a href="https://punytruck2881.grafana.net/d/ammk75q/status-geral-das-especies-f09f948e?kiosk" target="_blank" class="qr-link" title="Clique ou toque para abrir o painel">
+        <img class="qr-img" src="qrcode.png" alt="QR Code para o painel" />
+        <span class="qr-tap-hint">👆 Toque no QR Code para abrir</span>
+      </a>
+
       <div class="qr-desc">
-        Aponte a câmera de outro aparelho para abrir direto no navegador.
+        Ou aponte a câmera de outro aparelho para abrir direto.
       </div>
+
+      <!-- Botão Grande de Ação Direta -->
+      <a href="https://punytruck2881.grafana.net/d/ammk75q/status-geral-das-especies-f09f948e?kiosk" target="_blank" class="btn-action">
+        👉 Acessar Painel dos Pássaros no Grafana →
+      </a>
+      <div class="btn-hint">Acesso livre e gratuito • Sem login</div>
     </div>
 
     <!-- Rodapé -->

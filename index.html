@@ -21,12 +21,12 @@
     }
     .card-container {
       width: 100%;
-      max-width: 460px;
+      max-width: 480px;
       background: #ffffff;
       border-radius: 16px;
       border: 1px solid #dcdfe6;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-      padding: 20px 16px;
+      padding: 22px 18px;
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -63,7 +63,7 @@
       border-left: 4px solid #2e7d32;
       border-radius: 8px;
       padding: 14px 12px;
-      font-size: 14px;
+      font-size: 13.5px;
       color: #333;
     }
     .callout strong {
@@ -72,8 +72,32 @@
       margin-bottom: 4px;
       font-size: 14.5px;
     }
+
+    /* Como Funciona a Tecnologia */
+    .how-it-works {
+      background: #fdfdfd;
+      border: 1px solid #e3ebe3;
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .how-it-works-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e7e34;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .how-it-works p {
+      font-size: 13px;
+      color: #4a5568;
+      line-height: 1.45;
+    }
     
-    /* Lista de Recursos */
+    /* Lista de Recursos e Explicações do Catálogo */
     .features {
       display: flex;
       flex-direction: column;
@@ -95,15 +119,15 @@
       margin-top: 2px;
     }
     .feature-text h3 {
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 700;
       color: #1f2937;
       margin-bottom: 2px;
     }
     .feature-text p {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #555;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     /* Central de Acesso Unificada (QR Code + Botão) */
@@ -111,12 +135,12 @@
       border: 2px solid #2e7d32;
       background: linear-gradient(180deg, #fbfdfb 0%, #f1f8f1 100%);
       border-radius: 14px;
-      padding: 16px 14px;
+      padding: 18px 14px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
     }
     .qr-badge {
@@ -142,8 +166,8 @@
       transform: scale(1.02);
     }
     .qr-img {
-      width: 145px;
-      height: 145px;
+      width: 140px;
+      height: 140px;
       border-radius: 10px;
       background: #fff;
       padding: 6px;
@@ -154,14 +178,10 @@
       font-size: 12px;
       font-weight: 700;
       color: #1e7e34;
-      margin-top: 6px;
+      margin-top: 8px;
       background: rgba(46, 125, 50, 0.1);
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 8px;
-    }
-    .qr-desc {
-      font-size: 12px;
-      color: #666;
     }
 
     /* Botão Principal Touch */
@@ -172,22 +192,16 @@
       color: #ffffff !important;
       text-decoration: none;
       text-align: center;
-      font-size: 15.5px;
+      font-size: 15px;
       font-weight: 700;
       padding: 13px 16px;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(46, 125, 50, 0.25);
       transition: background 0.2s ease, transform 0.1s ease;
-      margin-top: 4px;
     }
     .btn-action:hover {
       background: #256629;
       transform: translateY(-1px);
-    }
-    .btn-hint {
-      text-align: center;
-      font-size: 11.5px;
-      color: #555;
     }
 
     .footer-quote {
@@ -212,45 +226,69 @@
 
     <!-- Banner com Ilustração -->
     <div class="banner">
-      <img src="passaros.jpg" alt="Pássaros Cantando" />
+      <img src="passaros.jpg" alt="Pássaros Cantando no Jardim" />
     </div>
 
     <!-- Mensagem de Boas-vindas -->
     <div class="callout">
       <strong>🍃 Um convite para respirar e contemplar:</strong>
-      Você já reparou na música que toca na sua janela todas as manhãs? Nosso condomínio é um refúgio verde privilegiado! Para nos reconectar com essa paz e valorizar a preservação do nosso espaço, instalamos uma estação inteligente que escuta o jardim e cataloga os nossos visitantes alados em tempo real.
+      Você já reparou na música que toca na sua janela todas as manhãs? Nosso condomínio é um refúgio verde privilegiado! Para nos reconectar com essa paz e valorizar a preservação do nosso espaço, instalamos uma estação que escuta o jardim e cataloga os nossos visitantes em tempo real.
     </div>
 
-    <!-- Lista de Recursos em Linha Única -->
+    <!-- Como Funciona a Estação (Extraído do Print) -->
+    <div class="how-it-works">
+      <div class="how-it-works-title">
+        <span>🧠</span> Como funciona a identificação?
+      </div>
+      <p>
+        Nosso microfone inteligente escuta o jardim dia e noite. Uma Inteligência Artificial especializada reconhece a <strong>"impressão digital sonora"</strong> de cada canto, ignora os barulhos da rua e valida apenas aves reais quando atinge <strong>mais de 75% de certeza</strong> na identificação!
+      </p>
+    </div>
+
+    <!-- O que o morador encontrará no catálogo (Baseado no Print) -->
     <div class="features">
       
       <div class="feature-item">
-        <div class="feature-icon">🏆</div>
+        <div class="feature-icon">⏰</div>
         <div class="feature-text">
-          <h3>Mais de 60 Espécies Catalogadas</h3>
-          <p>Do clássico Bem-te-vi e Sabiá aos visitantes raros que pousam nas copas das nossas árvores.</p>
+          <h3>O Relógio Biológico (24h)</h3>
+          <p>Mapeia a atividade do dia, revelando os horários de pico da cantoria matinal e os momentos de descanso e calmaria.</p>
         </div>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon">⏰</div>
+        <div class="feature-icon">🛡️</div>
         <div class="feature-text">
-          <h3>O Ritmo do Jardim (24 Horas)</h3>
-          <p>Descubra os momentos de maior cantoria pela manhã e as horas de calmaria e descanso no condomínio.</p>
+          <h3>Tesouros do Nosso Jardim</h3>
+          <p>Aponta as espécies raras e vulneráveis que encontraram aqui um abrigo seguro. Cuidar do verde é manter a casa delas viva!</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🎧</div>
+        <div class="feature-text">
+          <h3>Áudios, Favoritos & Curiosidades</h3>
+          <p>No painel, você pode dar play nos cantos para treinar o ouvido, ver as espécies favoritas (⭐) e consultar a enciclopédia de cada ave.</p>
         </div>
       </div>
 
     </div>
 
-    <!-- Central de Acesso Unificada (QR Code Clicável + Botão de Toque) -->
+    <!-- Central de Acesso Unificada (QR Code Clicável + Botão) -->
     <div class="access-card">
       <div class="qr-badge">Acesso ao Painel Online</div>
       
-      <!-- QR Code Clicável: toca nele ou escaneia -->
+      <!-- QR Code Clicável -->
       <a href="https://punytruck2881.grafana.net/public-dashboards/7d2c7978423e48639dae7817febeee54?theme=light&kiosk" target="_blank" class="qr-link" title="Clique ou toque para abrir o painel">
         <img class="qr-img" src="qrcode.png" alt="QR Code para o painel" />
-        <span class="qr-tap-hint">👆 Toque no QR Code para abrir ou aponte a câmera do seu celular!</span>
+        <span class="qr-tap-hint">👆 Toque no QR Code ou aponte a câmera</span>
       </a>
+
+      <!-- Botão de Acesso Direto -->
+      <a href="https://punytruck2881.grafana.net/public-dashboards/7d2c7978423e48639dae7817febeee54?theme=light&kiosk" target="_blank" class="btn-action">
+        Abrir Painel das Aves 🚀
+      </a>
+    </div>
 
     <!-- Rodapé -->
     <div class="footer-quote">
